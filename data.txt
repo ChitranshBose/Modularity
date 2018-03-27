@@ -1,6 +1,0 @@
-name	roll_no.	univ_roll	room_no.
-ajay	1		2011543		lt-6
-jay	2		2011555		lt-5
-rahul	45		2011756		lt-4
-sanav	51		2011432		lt-4
-tanuj	60		2011480		lt-4
