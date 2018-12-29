@@ -6,13 +6,13 @@ public class Sort extends Driver{
 			//ArrayList<String> al=new ArrayList<String>();
 	        Class.forName("com.mysql.jdbc.Driver");
 			System.out.println("waiting");
-			Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/emp_data","root","cb#0211#");
+			Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/cloud_employees","root","cb#0211#");
 			Statement st=con.createStatement();
 	        System.out.println("*************Welcome To Sorting Module**************");
 	       	System.out.println("the data is:");
-			disp="select * from empData order by emp_name;";
+			disp="select * from employee order by emp_name;";
 			ResultSet rs=st.executeQuery(disp);
-			System.out.println("name|emp_id|salary|email_id");
+			System.out.println("  NAME  |ACCOUNT NUMBER| AGE | SALARY |  DOB  |  DOJ  |PHONE NUMBER");
 			while(rs.next()){
 				//name=rs.getString(1);
 				//al.add(name);
@@ -22,6 +22,7 @@ public class Sort extends Driver{
 				System.out.print(rs.getInt(4)+" |");
 				System.out.print(rs.getString(5)+" |");
 				System.out.print(rs.getString(6)+" |");
+				System.out.print(rs.getString(7)+" |");
 			}
 			/*Collections.sort(al);
 			for(String str:al){

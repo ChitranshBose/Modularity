@@ -3,10 +3,11 @@ import java.util.Scanner;
 //import java.sql.*;
 public class Driver {
 	String query,disp;
-	public static void main(String args[]){
+	static Scanner sc=new Scanner (System.in);
+	public static void main(String args[])throws Exception{
 		int choice;
 		do{
-			Scanner sc=new Scanner (System.in);
+			//Scanner sc=new Scanner (System.in);
 			Input in=new Input();
 			Output out=new Output();
 			Sort sort=new Sort();
@@ -30,7 +31,7 @@ public class Driver {
 			default:
 					System.out.println("Invalid choice.");
 			}
-			sc.close();
+			//sc.close();
 		}while(choice!=0&&choice<5);
 	}
 }

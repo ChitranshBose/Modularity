@@ -5,13 +5,13 @@ public class Output extends Driver{
         try{
         	Class.forName("com.mysql.jdbc.Driver");
 			System.out.println("waiting");
-			Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/emp_data","root","cb#0211#");
+			Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/cloud_employees","root","cb#0211#");
 			Statement st=con.createStatement();
         	System.out.println("*************Welcome To Reporting Module***************");
         	System.out.println("the data is:");
-			disp="select * from empData;";
+			disp="select * from employee;";
 			ResultSet rs=st.executeQuery(disp);
-			System.out.println("name|emp_id|salary|email_id");
+			System.out.println("  NAME  |ACCOUNT NUMBER| AGE | SALARY |  DOB  |  DOJ  |PHONE NUMBER");
 			while(rs.next())
 			{
 				System.out.print(rs.getString(1)+" |");
@@ -20,7 +20,7 @@ public class Output extends Driver{
 				System.out.print(rs.getInt(4)+" |");
 				System.out.print(rs.getString(5)+" |");
 				System.out.print(rs.getString(6)+" |");
-				
+				System.out.print(rs.getString(7)+" |");
 			}
         }
         catch(Exception e){
