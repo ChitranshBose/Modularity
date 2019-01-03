@@ -1,6 +1,5 @@
 import java.sql.*;
-//import java.util.Scanner;
-public class Output extends Driver{
+public class Output extends Input {
 	public void Report(){
         try{
         	Class.forName("com.mysql.jdbc.Driver");
@@ -24,7 +23,7 @@ public class Output extends Driver{
 			}
         }
         catch(Exception e){
-        	System.out.println("Records not found");
+        	System.out.println("Records not found.");
         }
 	}
 }

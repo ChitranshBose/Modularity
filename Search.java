@@ -1,7 +1,5 @@
-//import java.lang.*;
-//import java.util.Scanner;
 import java.sql.*;
-public class Search extends Driver{
+public class Search extends Sort {
 	public void searching(){
 		try{
 			//Scanner sc=new Scanner(System.in);
@@ -30,7 +28,7 @@ public class Search extends Driver{
 						}
 						break;
 				case 2:
-						System.out.println("Enter name to be searched");
+						System.out.println("Enter name to be searched.");
 						int acc_no=sc.nextInt();
 						disp="select * from empData where emp_acc="+acc_no+";";
 						ResultSet rs1=st.executeQuery(disp);

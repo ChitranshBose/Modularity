@@ -9,10 +9,10 @@ import javax.swing.Timer;
 import javax.swing.SwingConstants;
 import java.util.*;
 import java.text.*;
-public class Driver extends Menu{
-	public static void main(String args[])throws Exception{
-		int choice;
-		ClockLabel dateLable = new ClockLabel("date");
+public class DigitalClock{
+	public static void main(String[] arguments) {
+		 
+	    ClockLabel dateLable = new ClockLabel("date");
 	    ClockLabel timeLable = new ClockLabel("time");
 	    ClockLabel dayLable = new ClockLabel("day");
 	 
@@ -29,42 +29,10 @@ public class Driver extends Menu{
 	    f.getContentPane().setBackground(Color.BLACK);
 	 
 	    f.setVisible(true);
-	  
-		do{
-			Input in=new Input();
-			Output out=new Output();
-			Sort sort=new Sort();
-			Search search=new Search();
-			Menu menu=new Menu();
-			System.out.println("1-INSERT MODULE\n2-REPORT MODULE\n3-SORTING MODULE\n4-SEARCHING MODULE\n5-HELP\n6-EXIT");
-			System.out.println("Enter your choice.");
-			choice=sc.nextInt();
-			switch(choice){
-			case 1:
-					in.Insert();
-					break;
-			case 2:
-					out.Report();
-					break;
-			case 3:
-					sort.Sorting();
-					break;
-			case 4:
-					search.searching();
-					break;
-			case 5:
-					menu.Info();
-					break;
-			case 6:
-					System.out.println("Thank you for your time.Exit........");
-					System.exit(0);
-			default:
-					System.out.println("Invalid choice.Try again.");
-			}
-		}while(choice!=0);
+	  }
 	}
-}
-class Clk extends JLabel implements ActionListener {
+	 
+	class ClockLabel extends JLabel implements ActionListener {
 	 
 	  /**
 		 * 
@@ -73,7 +41,7 @@ class Clk extends JLabel implements ActionListener {
 	String type;
 	  SimpleDateFormat sdf;
 	 
-	  public Clk(String type) {
+	  public ClockLabel(String type) {
 	    this.type = type;
 	    setForeground(Color.WHITE);
 	 
@@ -103,3 +71,4 @@ class Clk extends JLabel implements ActionListener {
 	    setText(sdf.format(d));
 	  }
 	}
+

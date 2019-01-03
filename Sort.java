@@ -1,6 +1,5 @@
-//import java.util.*;
 import java.sql.*;
-public class Sort extends Driver{	
+public class Sort extends Output {
 	public void Sorting(){
 		try{
 			//ArrayList<String> al=new ArrayList<String>();
@@ -30,7 +29,8 @@ public class Sort extends Driver{
 			}*/
 		}
 		catch(Exception e){
-			System.out.println("The data not found.");
+			System.out.println("The data can not be sorted.");
 		}
 	}
+
 }
